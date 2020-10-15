@@ -14,4 +14,7 @@ CALL db.schema()
 ```
 MATCH (d:Disease)--(g:Gene) RETURN d.name,collect(g.name)
 ```
-4. 
+4. Count gene and pathways for each diseases
+```
+MATCH (d:Disease)--(g:Gene)--(p:Pathway) RETURN d.name,count(g.name),count(p.name)
+```
