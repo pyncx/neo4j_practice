@@ -9,3 +9,9 @@ CALL db.schema()
 ```
 
 <img src="graph.png" width="300" height="300"></img>
+
+3. Collect genes associated with each of the disease
+```
+MATCH (d:Disease)--(g:Gene) RETURN d.name,collect(g.name)
+```
+4. 
