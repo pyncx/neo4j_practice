@@ -8,4 +8,4 @@ MATCH (d:Disease)--(s:Symptom) RETURN d.name,collect(s.name)
 CALL db.schema()
 ```
 
-<img src="graph.png" width="400" height="400"></img>
+<img src="graph.png" width="800" height="300"></img>
