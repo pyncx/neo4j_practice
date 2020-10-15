@@ -18,3 +18,7 @@ MATCH (d:Disease)--(g:Gene) RETURN d.name,collect(g.name)
 ```
 MATCH (d:Disease)--(g:Gene)--(p:Pathway) RETURN d.name,count(g.name),count(p.name)
 ```
+5. Count and collect associated compound with disease
+```
+MATCH (d:Disease)--(c:Compound)--(s:SideEffect) RETURN d.name,count(DISTINCT c.name),collect(DISTINCT c.name)
+```
