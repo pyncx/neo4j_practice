@@ -1,4 +1,7 @@
 # neo4j_practice at het.io
+
+Open https://neo4j.het.io/browser/ and practise following cypher queries:
+
 1. Collect Symptoms for each of the disease
 ```
 MATCH (d:Disease)--(s:Symptom) RETURN d.name,collect(s.name)
