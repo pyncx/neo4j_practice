@@ -23,7 +23,8 @@ MATCH (d:Disease)--(g:Gene)--(p:Pathway) RETURN d.name,count(g.name),count(p.nam
 ```
 5. Count and collect associated compound with disease
 ```
-MATCH (d:Disease)--(c:Compound)--(s:SideEffect) RETURN d.name,count(DISTINCT c.name),collect(DISTINCT c.name)
+MATCH (d:Disease)--(c:Compound)--(s:SideEffect) 
+RETURN d.name,count(DISTINCT c.name),collect(DISTINCT c.name)
 ```
 6. Visualize a subgraph of associated compound with disease and side effects (100 nodes)
 
@@ -36,4 +37,5 @@ MATCH p=(d:Disease)--(c:Compound)--(s:SideEffect) RETURN p LIMIT 100
 ```
 MATCH path=(d:Disease)--(g:Gene)--(p:Pathway) RETURN path LIMIT 100
 ```
+<img src="graph-1.png" width="300" height="300"></img>
 
