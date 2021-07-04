@@ -1,4 +1,4 @@
-# neo4j_practice at het.io
+# Neo4J practice at ```het.io```
 
 Open https://neo4j.het.io/browser/ and practise following cypher queries:
 
@@ -25,3 +25,15 @@ MATCH (d:Disease)--(g:Gene)--(p:Pathway) RETURN d.name,count(g.name),count(p.nam
 ```
 MATCH (d:Disease)--(c:Compound)--(s:SideEffect) RETURN d.name,count(DISTINCT c.name),collect(DISTINCT c.name)
 ```
+6. Visualize a subgraph of associated compound with disease and side effects (100 nodes)
+
+```
+MATCH p=(d:Disease)--(c:Compound)--(s:SideEffect) RETURN p LIMIT 100
+```
+
+7. Visualize the subgraph of Disease, Gene and Pathways (100 nodes)
+
+```
+MATCH path=(d:Disease)--(g:Gene)--(p:Pathway) RETURN path LIMIT 100
+```
+
