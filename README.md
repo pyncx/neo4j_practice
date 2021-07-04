@@ -32,6 +32,8 @@ RETURN d.name,count(DISTINCT c.name),collect(DISTINCT c.name)
 MATCH p=(d:Disease)--(c:Compound)--(s:SideEffect) RETURN p LIMIT 100
 ```
 
+<img src="graph-2.png" width="300" height="300"></img>
+
 7. Visualize the subgraph of Disease, Gene and Pathways (100 nodes)
 
 ```
